@@ -1,0 +1,898 @@
+[
+  {
+    "timestamp": "2016-09-30 10:38:00.621014", 
+    "testcases": [
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_block_on_min", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_maxSize", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, push and pull large amounts of data", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_generic_test", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs", 
+        "name": "test_queue_stress", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==22594== Memcheck, a memory error detector\n==22594== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==22594== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==22594== Command: ./queue_tests 5\n==22594== \n==22594== \n==22594== HEAP SUMMARY:\n==22594==     in use at exit: 112 bytes in 1 blocks\n==22594==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==22594== \n==22594== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==22594==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==22594==    by 0x401A6E: queue_create (queue.c:96)\n==22594==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==22594==    by 0x401923: main (queue_tests.c:243)\n==22594== \n==22594== LEAK SUMMARY:\n==22594==    definitely lost: 112 bytes in 1 blocks\n==22594==    indirectly lost: 0 bytes in 0 blocks\n==22594==      possibly lost: 0 bytes in 0 blocks\n==22594==    still reachable: 0 bytes in 0 blocks\n==22594==         suppressed: 0 bytes in 0 blocks\n==22594== \n==22594== For counts of detected and suppressed errors, rerun with: -v\n==22594== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_queue_mem", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that queue is not bounded", 
+        "ptsEarned": 0.0, 
+        "log": "Timed Out!", 
+        "name": "test_queue_unboundedness", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore in rendezvous.c", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore init function", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_init", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore wait", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore wait blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore post", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore post blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test on use of barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_single", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_multiple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier under valgrind.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==22726== Memcheck, a memory error detector\n==22726== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==22726== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==22726== Command: ./barrier_tests 2 4\n==22726== \n==22726== \n==22726== HEAP SUMMARY:\n==22726==     in use at exit: 0 bytes in 0 blocks\n==22726==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==22726== \n==22726== All heap blocks were freed -- no leaks are possible\n==22726== \n==22726== For counts of detected and suppressed errors, rerun with: -v\n==22726== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_barrier_mem", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "37262", 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c"
+  }, 
+  {
+    "timestamp": "2016-09-30 22:00:00.731724", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_block_on_min", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_maxSize", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_generic_test", 
+        "description": "Test queue, push and pull large amounts of data"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_stress", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==9365== Memcheck, a memory error detector\n==9365== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==9365== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==9365== Command: ./queue_tests 5\n==9365== \n==9365== \n==9365== HEAP SUMMARY:\n==9365==     in use at exit: 112 bytes in 1 blocks\n==9365==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==9365== \n==9365== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==9365==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==9365==    by 0x401A6E: queue_create (queue.c:96)\n==9365==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==9365==    by 0x401923: main (queue_tests.c:243)\n==9365== \n==9365== LEAK SUMMARY:\n==9365==    definitely lost: 112 bytes in 1 blocks\n==9365==    indirectly lost: 0 bytes in 0 blocks\n==9365==      possibly lost: 0 bytes in 0 blocks\n==9365==    still reachable: 0 bytes in 0 blocks\n==9365==         suppressed: 0 bytes in 0 blocks\n==9365== \n==9365== For counts of detected and suppressed errors, rerun with: -v\n==9365== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_mem", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Timed Out!", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_unboundedness", 
+        "description": "Test that queue is not bounded"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore", 
+        "description": "Test semamore in rendezvous.c"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_init", 
+        "description": "Test semamore init function"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_wait_simple", 
+        "description": "Test semamore wait"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_wait_block", 
+        "description": "Test that semamore wait blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_post_simple", 
+        "description": "Test semamore post"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_post_block", 
+        "description": "Test that semamore post blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_single", 
+        "description": "Test on use of barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_multiple", 
+        "description": "Test for multiple uses of the barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==9497== Memcheck, a memory error detector\n==9497== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==9497== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==9497== Command: ./barrier_tests 2 4\n==9497== \n==9497== \n==9497== HEAP SUMMARY:\n==9497==     in use at exit: 0 bytes in 0 blocks\n==9497==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==9497== \n==9497== All heap blocks were freed -- no leaks are possible\n==9497== \n==9497== For counts of detected and suppressed errors, rerun with: -v\n==9497== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_mem", 
+        "description": "Test for multiple uses of the barrier under valgrind."
+      }
+    ], 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c", 
+    "revision": "37589"
+  }, 
+  {
+    "timestamp": "2016-10-01 22:00:00.698447", 
+    "testcases": [
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "name": "test_queue_block_on_min", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "name": "test_queue_maxSize", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, push and pull large amounts of data", 
+        "name": "test_queue_generic_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Queue stress test", 
+        "name": "test_queue_stress", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Queue stress test", 
+        "name": "test_queue_mem", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==28559== Memcheck, a memory error detector\n==28559== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==28559== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==28559== Command: ./queue_tests 5\n==28559== \n==28559== \n==28559== HEAP SUMMARY:\n==28559==     in use at exit: 112 bytes in 1 blocks\n==28559==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==28559== \n==28559== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==28559==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==28559==    by 0x401A6E: queue_create (queue.c:96)\n==28559==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==28559==    by 0x401923: main (queue_tests.c:243)\n==28559== \n==28559== LEAK SUMMARY:\n==28559==    definitely lost: 112 bytes in 1 blocks\n==28559==    indirectly lost: 0 bytes in 0 blocks\n==28559==      possibly lost: 0 bytes in 0 blocks\n==28559==    still reachable: 0 bytes in 0 blocks\n==28559==         suppressed: 0 bytes in 0 blocks\n==28559== \n==28559== For counts of detected and suppressed errors, rerun with: -v\n==28559== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that queue is not bounded", 
+        "name": "test_queue_unboundedness", 
+        "log": "Timed Out!"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore in rendezvous.c", 
+        "name": "test_semamore", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore init function", 
+        "name": "test_semamore_init", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore wait", 
+        "name": "test_semamore_wait_simple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that semamore wait blocks", 
+        "name": "test_semamore_wait_block", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore post", 
+        "name": "test_semamore_post_simple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that semamore post blocks", 
+        "name": "test_semamore_post_block", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test on use of barrier.", 
+        "name": "test_barrier_single", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test for multiple uses of the barrier.", 
+        "name": "test_barrier_multiple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test for multiple uses of the barrier under valgrind.", 
+        "name": "test_barrier_mem", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==28691== Memcheck, a memory error detector\n==28691== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==28691== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==28691== Command: ./barrier_tests 2 4\n==28691== \n==28691== \n==28691== HEAP SUMMARY:\n==28691==     in use at exit: 0 bytes in 0 blocks\n==28691==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==28691== \n==28691== All heap blocks were freed -- no leaks are possible\n==28691== \n==28691== For counts of detected and suppressed errors, rerun with: -v\n==28691== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n"
+      }
+    ], 
+    "revision": "38391", 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c"
+  }, 
+  {
+    "timestamp": "2016-10-02 22:00:00.748311", 
+    "testcases": [
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_block_on_min", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_maxSize", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, push and pull large amounts of data", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_generic_test", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs", 
+        "name": "test_queue_stress", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==15423== Memcheck, a memory error detector\n==15423== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15423== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==15423== Command: ./queue_tests 5\n==15423== \n==15423== \n==15423== HEAP SUMMARY:\n==15423==     in use at exit: 112 bytes in 1 blocks\n==15423==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==15423== \n==15423== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==15423==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==15423==    by 0x401A6E: queue_create (queue.c:96)\n==15423==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==15423==    by 0x401923: main (queue_tests.c:243)\n==15423== \n==15423== LEAK SUMMARY:\n==15423==    definitely lost: 112 bytes in 1 blocks\n==15423==    indirectly lost: 0 bytes in 0 blocks\n==15423==      possibly lost: 0 bytes in 0 blocks\n==15423==    still reachable: 0 bytes in 0 blocks\n==15423==         suppressed: 0 bytes in 0 blocks\n==15423== \n==15423== For counts of detected and suppressed errors, rerun with: -v\n==15423== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_queue_mem", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that queue is not bounded", 
+        "ptsEarned": 0.0, 
+        "log": "Timed Out!", 
+        "name": "test_queue_unboundedness", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore in rendezvous.c", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore init function", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_init", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore wait", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore wait blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore post", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore post blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test on use of barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_single", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_multiple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier under valgrind.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==15555== Memcheck, a memory error detector\n==15555== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15555== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==15555== Command: ./barrier_tests 2 4\n==15555== \n==15555== \n==15555== HEAP SUMMARY:\n==15555==     in use at exit: 0 bytes in 0 blocks\n==15555==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==15555== \n==15555== All heap blocks were freed -- no leaks are possible\n==15555== \n==15555== For counts of detected and suppressed errors, rerun with: -v\n==15555== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_barrier_mem", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c", 
+    "revision": "39221"
+  }, 
+  {
+    "timestamp": "2016-10-03 22:00:00.712509", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_block_on_min", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_maxSize", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_generic_test", 
+        "description": "Test queue, push and pull large amounts of data"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_stress", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2174== Memcheck, a memory error detector\n==2174== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2174== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2174== Command: ./queue_tests 5\n==2174== \n==2174== \n==2174== HEAP SUMMARY:\n==2174==     in use at exit: 112 bytes in 1 blocks\n==2174==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==2174== \n==2174== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==2174==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==2174==    by 0x401A6E: queue_create (queue.c:96)\n==2174==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==2174==    by 0x401923: main (queue_tests.c:243)\n==2174== \n==2174== LEAK SUMMARY:\n==2174==    definitely lost: 112 bytes in 1 blocks\n==2174==    indirectly lost: 0 bytes in 0 blocks\n==2174==      possibly lost: 0 bytes in 0 blocks\n==2174==    still reachable: 0 bytes in 0 blocks\n==2174==         suppressed: 0 bytes in 0 blocks\n==2174== \n==2174== For counts of detected and suppressed errors, rerun with: -v\n==2174== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_mem", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Timed Out!", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_unboundedness", 
+        "description": "Test that queue is not bounded"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore", 
+        "description": "Test semamore in rendezvous.c"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_init", 
+        "description": "Test semamore init function"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_wait_simple", 
+        "description": "Test semamore wait"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_wait_block", 
+        "description": "Test that semamore wait blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_post_simple", 
+        "description": "Test semamore post"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_semamore_post_block", 
+        "description": "Test that semamore post blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_single", 
+        "description": "Test on use of barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_multiple", 
+        "description": "Test for multiple uses of the barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2307== Memcheck, a memory error detector\n==2307== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2307== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2307== Command: ./barrier_tests 2 4\n==2307== \n==2307== \n==2307== HEAP SUMMARY:\n==2307==     in use at exit: 0 bytes in 0 blocks\n==2307==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==2307== \n==2307== All heap blocks were freed -- no leaks are possible\n==2307== \n==2307== For counts of detected and suppressed errors, rerun with: -v\n==2307== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_barrier_mem", 
+        "description": "Test for multiple uses of the barrier under valgrind."
+      }
+    ], 
+    "revision": "41222", 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c"
+  }, 
+  {
+    "timestamp": "2016-10-04 22:00:00.722538", 
+    "testcases": [
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "name": "test_queue_block_on_min", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "name": "test_queue_maxSize", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test queue, push and pull large amounts of data", 
+        "name": "test_queue_generic_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Queue stress test", 
+        "name": "test_queue_stress", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Queue stress test", 
+        "name": "test_queue_mem", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==21222== Memcheck, a memory error detector\n==21222== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==21222== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==21222== Command: ./queue_tests 5\n==21222== \n==21222== \n==21222== HEAP SUMMARY:\n==21222==     in use at exit: 112 bytes in 1 blocks\n==21222==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==21222== \n==21222== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==21222==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==21222==    by 0x401A6E: queue_create (queue.c:96)\n==21222==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==21222==    by 0x401923: main (queue_tests.c:243)\n==21222== \n==21222== LEAK SUMMARY:\n==21222==    definitely lost: 112 bytes in 1 blocks\n==21222==    indirectly lost: 0 bytes in 0 blocks\n==21222==      possibly lost: 0 bytes in 0 blocks\n==21222==    still reachable: 0 bytes in 0 blocks\n==21222==         suppressed: 0 bytes in 0 blocks\n==21222== \n==21222== For counts of detected and suppressed errors, rerun with: -v\n==21222== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that queue is not bounded", 
+        "name": "test_queue_unboundedness", 
+        "log": "Timed Out!"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore in rendezvous.c", 
+        "name": "test_semamore", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore init function", 
+        "name": "test_semamore_init", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore wait", 
+        "name": "test_semamore_wait_simple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that semamore wait blocks", 
+        "name": "test_semamore_wait_block", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test semamore post", 
+        "name": "test_semamore_post_simple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that semamore post blocks", 
+        "name": "test_semamore_post_block", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test on use of barrier.", 
+        "name": "test_barrier_single", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test for multiple uses of the barrier.", 
+        "name": "test_barrier_multiple", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test for multiple uses of the barrier under valgrind.", 
+        "name": "test_barrier_mem", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==21354== Memcheck, a memory error detector\n==21354== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==21354== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==21354== Command: ./barrier_tests 2 4\n==21354== \n==21354== \n==21354== HEAP SUMMARY:\n==21354==     in use at exit: 0 bytes in 0 blocks\n==21354==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==21354== \n==21354== All heap blocks were freed -- no leaks are possible\n==21354== \n==21354== For counts of detected and suppressed errors, rerun with: -v\n==21354== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n"
+      }
+    ], 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c", 
+    "revision": "42594"
+  }, 
+  {
+    "timestamp": "2016-10-05 12:00:00.687175", 
+    "testcases": [
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_block_on_min", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, queue size doesn't exceed max capacity", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_maxSize", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test queue, push and pull large amounts of data", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_queue_generic_test", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTimed Out!\nTimed Out!\nTimed Out!\nYour code passed 0 out of 3 runs", 
+        "name": "test_queue_stress", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Queue stress test", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==7837== Memcheck, a memory error detector\n==7837== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7837== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7837== Command: ./queue_tests 5\n==7837== \n==7837== \n==7837== HEAP SUMMARY:\n==7837==     in use at exit: 112 bytes in 1 blocks\n==7837==   total heap usage: 11 allocs, 10 frees, 272 bytes allocated\n==7837== \n==7837== 112 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==7837==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==7837==    by 0x401A6E: queue_create (queue.c:96)\n==7837==    by 0x40165A: test_queue_mem (queue_tests.c:192)\n==7837==    by 0x401923: main (queue_tests.c:243)\n==7837== \n==7837== LEAK SUMMARY:\n==7837==    definitely lost: 112 bytes in 1 blocks\n==7837==    indirectly lost: 0 bytes in 0 blocks\n==7837==      possibly lost: 0 bytes in 0 blocks\n==7837==    still reachable: 0 bytes in 0 blocks\n==7837==         suppressed: 0 bytes in 0 blocks\n==7837== \n==7837== For counts of detected and suppressed errors, rerun with: -v\n==7837== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_queue_mem", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that queue is not bounded", 
+        "ptsEarned": 0.0, 
+        "log": "Timed Out!", 
+        "name": "test_queue_unboundedness", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore in rendezvous.c", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore init function", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_init", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore wait", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore wait blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_wait_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test semamore post", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_simple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that semamore post blocks", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_semamore_post_block", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test on use of barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_single", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "test_barrier_multiple", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test for multiple uses of the barrier under valgrind.", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==7969== Memcheck, a memory error detector\n==7969== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7969== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7969== Command: ./barrier_tests 2 4\n==7969== \n==7969== \n==7969== HEAP SUMMARY:\n==7969==     in use at exit: 0 bytes in 0 blocks\n==7969==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==7969== \n==7969== All heap blocks were freed -- no leaks are possible\n==7969== \n==7969== For counts of detected and suppressed errors, rerun with: -v\n==7969== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "name": "test_barrier_mem", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "43065", 
+    "checksum": "9dccc4e1cf06b9b375e1a15ba841708c738f1cc9  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c"
+  }, 
+  {
+    "timestamp": "2016-10-06 00:00:00.682464", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_queue_block_on_min", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_queue_maxSize", 
+        "description": "Test queue, queue size doesn't exceed max capacity"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_queue_generic_test", 
+        "description": "Test queue, push and pull large amounts of data"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_queue_stress", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==26260== Memcheck, a memory error detector\n==26260== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==26260== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==26260== Command: ./queue_tests 5\n==26260== \n==26260== \n==26260== HEAP SUMMARY:\n==26260==     in use at exit: 0 bytes in 0 blocks\n==26260==   total heap usage: 11 allocs, 11 frees, 272 bytes allocated\n==26260== \n==26260== All heap blocks were freed -- no leaks are possible\n==26260== \n==26260== For counts of detected and suppressed errors, rerun with: -v\n==26260== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_queue_mem", 
+        "description": "Queue stress test"
+      }, 
+      {
+        "log": "Timed Out!", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_queue_unboundedness", 
+        "description": "Test that queue is not bounded"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore", 
+        "description": "Test semamore in rendezvous.c"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore_init", 
+        "description": "Test semamore init function"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore_wait_simple", 
+        "description": "Test semamore wait"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore_wait_block", 
+        "description": "Test that semamore wait blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore_post_simple", 
+        "description": "Test semamore post"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_semamore_post_block", 
+        "description": "Test that semamore post blocks"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_barrier_single", 
+        "description": "Test on use of barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_barrier_multiple", 
+        "description": "Test for multiple uses of the barrier."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==26392== Memcheck, a memory error detector\n==26392== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==26392== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==26392== Command: ./barrier_tests 2 4\n==26392== \n==26392== \n==26392== HEAP SUMMARY:\n==26392==     in use at exit: 0 bytes in 0 blocks\n==26392==   total heap usage: 5 allocs, 5 frees, 5,184 bytes allocated\n==26392== \n==26392== All heap blocks were freed -- no leaks are possible\n==26392== \n==26392== For counts of detected and suppressed errors, rerun with: -v\n==26392== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "name": "test_barrier_mem", 
+        "description": "Test for multiple uses of the barrier under valgrind."
+      }
+    ], 
+    "checksum": "6430b74593f4bfa43231ff6b18404a343e9bcb93  queue.c\n7be077592225f205ebd44444ae5bc3d241f56eaa  semamore.c\nb0d5841d144f31f51a6a652bc97d6401d6bf1879  barrier.c", 
+    "revision": "44380"
+  }
+]

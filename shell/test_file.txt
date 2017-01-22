@@ -1,0 +1,29 @@
+cd ..
+ls
+sleep 2
+echo Finished!
+cd libs
+cd ..
+cd ..
+ls
+sleep 2
+echo Finished!
+cd libs
+cd ..
+pwd
+ls
+cd cs241
+ls
+cd shell
+ls
+cd shell
+#-1
+ls
+sleep 2
+ls
+sleep 2
+sleep 2
+ls
+sleep 2
+cd libs
+cd ..

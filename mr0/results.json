@@ -1,0 +1,247 @@
+[
+  {
+    "timestamp": "2016-10-21 22:00:01.163497", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "small_input", 
+        "description": "Test that mr0 prints the correct output on a small input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "large_input", 
+        "description": "Test that mr0 print the correct output on a large input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "empty_input", 
+        "description": "Test that mr0 prints the correct output on an empty input."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==24666== Memcheck, a memory error detector\n==24666== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==24666== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==24666== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==24666== \n==24666== \n==24666== HEAP SUMMARY:\n==24666==     in use at exit: 0 bytes in 0 blocks\n==24666==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==24666== \n==24666== All heap blocks were freed -- no leaks are possible\n==24666== \n==24666== For counts of detected and suppressed errors, rerun with: -v\n==24666== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "mem_test", 
+        "description": "Memory tests"
+      }
+    ], 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
+    "revision": "57046"
+  }, 
+  {
+    "timestamp": "2016-10-22 22:00:01.575694", 
+    "testcases": [
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 print the correct output on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "name": "empty_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Memory tests", 
+        "name": "mem_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==1940== Memcheck, a memory error detector\n==1940== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==1940== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==1940== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==1940== \n==1940== \n==1940== HEAP SUMMARY:\n==1940==     in use at exit: 0 bytes in 0 blocks\n==1940==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==1940== \n==1940== All heap blocks were freed -- no leaks are possible\n==1940== \n==1940== For counts of detected and suppressed errors, rerun with: -v\n==1940== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+      }
+    ], 
+    "revision": "57437", 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
+  }, 
+  {
+    "timestamp": "2016-10-23 22:00:01.173741", 
+    "testcases": [
+      {
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "small_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that mr0 print the correct output on a large input", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "large_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "empty_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Memory tests", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==11526== Memcheck, a memory error detector\n==11526== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11526== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==11526== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==11526== \n==11526== \n==11526== HEAP SUMMARY:\n==11526==     in use at exit: 0 bytes in 0 blocks\n==11526==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==11526== \n==11526== All heap blocks were freed -- no leaks are possible\n==11526== \n==11526== For counts of detected and suppressed errors, rerun with: -v\n==11526== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "name": "mem_test", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
+    "revision": "58112"
+  }, 
+  {
+    "timestamp": "2016-10-24 22:00:01.100515", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "small_input", 
+        "description": "Test that mr0 prints the correct output on a small input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "large_input", 
+        "description": "Test that mr0 print the correct output on a large input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "empty_input", 
+        "description": "Test that mr0 prints the correct output on an empty input."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==21132== Memcheck, a memory error detector\n==21132== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==21132== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==21132== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==21132== \n==21132== \n==21132== HEAP SUMMARY:\n==21132==     in use at exit: 0 bytes in 0 blocks\n==21132==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==21132== \n==21132== All heap blocks were freed -- no leaks are possible\n==21132== \n==21132== For counts of detected and suppressed errors, rerun with: -v\n==21132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "mem_test", 
+        "description": "Memory tests"
+      }
+    ], 
+    "revision": "59585", 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
+  }, 
+  {
+    "timestamp": "2016-10-25 22:00:01.172421", 
+    "testcases": [
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 print the correct output on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "name": "empty_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Memory tests", 
+        "name": "mem_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==31080== Memcheck, a memory error detector\n==31080== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==31080== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==31080== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==31080== \n==31080== \n==31080== HEAP SUMMARY:\n==31080==     in use at exit: 0 bytes in 0 blocks\n==31080==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==31080== \n==31080== All heap blocks were freed -- no leaks are possible\n==31080== \n==31080== For counts of detected and suppressed errors, rerun with: -v\n==31080== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+      }
+    ], 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
+    "revision": "60208"
+  }, 
+  {
+    "timestamp": "2016-10-26 12:00:01.240049", 
+    "testcases": [
+      {
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "small_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that mr0 print the correct output on a large input", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "large_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "name": "empty_input", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Memory tests", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==8883== Memcheck, a memory error detector\n==8883== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==8883== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==8883== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==8883== \n==8883== \n==8883== HEAP SUMMARY:\n==8883==     in use at exit: 0 bytes in 0 blocks\n==8883==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==8883== \n==8883== All heap blocks were freed -- no leaks are possible\n==8883== \n==8883== For counts of detected and suppressed errors, rerun with: -v\n==8883== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "name": "mem_test", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "60409", 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
+  }, 
+  {
+    "timestamp": "2016-10-27 00:00:01.277326", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nfind: \u2018.../nkou2/mr0/.objs\u2019: No such file or directory\ncore/reducer.c:10:57: warning: unused parameter 'arg' [-Wunused-parameter]\nvoid print_ds(const char *key, const char *value, void *arg) {\n                                                        ^\n1 warning generated.\nmr0.c:62:12: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n           ^\nmr0.c:62:26: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n                         ^\nmr0.c:13:14: warning: unused parameter 'argc' [-Wunused-parameter]\nint main(int argc, char **argv) {\n             ^\n1 warning and 2 errors generated.\nmake: *** [.objs/mr0-release.o] Error 1\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "small_input", 
+        "description": "Test that mr0 prints the correct output on a small input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr0.c:62:12: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n           ^\nmr0.c:62:26: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n                         ^\nmr0.c:13:14: warning: unused parameter 'argc' [-Wunused-parameter]\nint main(int argc, char **argv) {\n             ^\n1 warning and 2 errors generated.\nmake: *** [.objs/mr0-release.o] Error 1\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "large_input", 
+        "description": "Test that mr0 print the correct output on a large input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr0.c:62:12: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n           ^\nmr0.c:62:26: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n                         ^\nmr0.c:13:14: warning: unused parameter 'argc' [-Wunused-parameter]\nint main(int argc, char **argv) {\n             ^\n1 warning and 2 errors generated.\nmake: *** [.objs/mr0-release.o] Error 1\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "empty_input", 
+        "description": "Test that mr0 prints the correct output on an empty input."
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr0.c:62:12: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n           ^\nmr0.c:62:26: error: use of undeclared identifier 'reducerName'\n    execvp(reducerName, &reducerName);\n                         ^\nmr0.c:13:14: warning: unused parameter 'argc' [-Wunused-parameter]\nint main(int argc, char **argv) {\n             ^\n1 warning and 2 errors generated.\nmake: *** [.objs/mr0-release.o] Error 1\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "mem_test", 
+        "description": "Memory tests"
+      }
+    ], 
+    "checksum": "a0d233c30189681aa11634f62a8408ea29009678  mr0.c", 
+    "revision": "60983"
+  }
+]
