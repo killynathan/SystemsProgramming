@@ -1,1 +1,1 @@
-assignments for the course: systems programming
+assignments for cs241: systems programming
